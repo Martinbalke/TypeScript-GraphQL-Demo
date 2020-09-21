@@ -9,13 +9,13 @@ const path_1 = __importDefault(require("path"));
 exports.default = {
     migrations: {
         path: path_1.default.join(__dirname, './migrations'),
-        pattern: /^[\w-]+\d+\.[tj]s$/
+        pattern: /^[\w-]+\d+\.[tj]s$/,
     },
     entities: [posts_1.Post],
     dbName: 'lireddit',
     user: 'martinbalke',
     password: 'postgres',
-    type: "postgresql",
-    debug: !constants_1.__prod__
+    type: 'postgresql',
+    debug: !constants_1.__prod__,
 };
 //# sourceMappingURL=mikro-orm.config.js.map
