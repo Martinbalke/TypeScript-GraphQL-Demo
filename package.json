@@ -3,14 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@mikro-orm/cli": "^4.0.4",
+    "@mikro-orm/core": "^4.0.4",
+    "@mikro-orm/migrations": "^4.0.4",
+    "@mikro-orm/postgresql": "^4.0.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/node": "^14.11.1",
+    "pg": "^8.3.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "typescript": "^4.0.3"
   },
   "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon dist/index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -29,6 +38,13 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
     ]
   }
 }
